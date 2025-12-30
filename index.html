@@ -894,6 +894,118 @@
                 flex-direction: column;
             }
         }
+
+        /* Añade estos estilos dentro de la sección de servicios en el CSS */
+
+        .services-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid var(--color-lila-claro);
+            flex-wrap: wrap;
+            gap: 10px; /* Agregamos espacio entre botones */
+        }
+
+        .tab-btn {
+            padding: 18px 25px;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-gris);
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            min-width: 120px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .tab-btn i {
+            font-size: 1.5rem;
+            color: var(--color-lila);
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            color: var(--color-lila);
+            background-color: rgba(157, 141, 241, 0.1);
+        }
+
+        .tab-btn.active i {
+            color: var(--color-lila-oscuro);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--color-lila);
+        }
+
+        .tab-btn:hover {
+            color: var(--color-lila);
+            background-color: rgba(157, 141, 241, 0.05);
+        }
+
+        .tab-btn:hover i {
+            transform: scale(1.1);
+        }
+
+        /* Para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .services-tabs {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                border-bottom: none;
+                gap: 15px;
+            }
+            
+            .tab-btn {
+                width: calc(50% - 15px);
+                min-width: auto;
+                border-radius: 10px;
+                padding: 15px 10px;
+                flex-direction: row;
+                gap: 15px;
+                border: 2px solid var(--color-lila-claro);
+            }
+            
+            .tab-btn.active {
+                border-color: var(--color-lila);
+            }
+            
+            .tab-btn.active::after {
+                display: none;
+            }
+            
+            .tab-btn span {
+                font-size: 0.9rem;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .services-tabs {
+                gap: 10px;
+            }
+            
+            .tab-btn {
+                width: 100%;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -1019,11 +1131,34 @@
                 <p>Ofrezco diversas terapias y abordajes holísticos para acompañarte en tu proceso de sanación y crecimiento personal.</p>
             </div>
             
-            <div class="services-tabs">
+            <!--<div class="services-tabs">
                 <button class="tab-btn active" data-tab="terapia">Terapia Holística</button>
                 <button class="tab-btn" data-tab="reiki">Sanación Energética</button>
                 <button class="tab-btn" data-tab="florales">Biodescodificación</button>
                 <button class="tab-btn" data-tab="meditacion">Meditación y Mindfulness</button>
+                <button class="tab-btn" data-tab="masajes">Masajes Ayurvédicos y Reflexología</button>
+                <button class="tab-btn" data-tab="arbol">Armonización del Árbol de la Vida</button>
+            </div>-->
+
+            <div class="services-tabs">
+                <button class="tab-btn active" data-tab="terapia">
+                    <i class="fas fa-hands"></i>
+                </button>
+                <button class="tab-btn" data-tab="reiki">
+                    <i class="fas fa-hand-sparkles"></i>
+                </button>
+                <button class="tab-btn" data-tab="florales">
+                    <i class="fas fa-heart"></i>
+                </button>
+                <button class="tab-btn" data-tab="meditacion">
+                    <i class="fas fa-spa"></i>
+                </button>
+                <button class="tab-btn" data-tab="masajes">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </button>
+                <button class="tab-btn" data-tab="arbol">
+                    <i class="fas fa-tree"></i>
+                </button>
             </div>
             
             <!-- Terapia Holística -->
@@ -1082,7 +1217,7 @@
                     </div>
                     
                     <div class="service-body">
-                        <p>En la sanación energética se trabaja con la energía universal para equilibrar los centros y meridianos energéticos del cuerpo. A través de la imposición de manos, canalizo esta energía para ayudarte a liberar bloqueos, reducir el estrés y promover tu capacidad natural de autocuración.</p>
+                        <p>En la sanación energética se trabaja con la energía universal para equilibrar los centros y meridianos energéticos del cuerpo. A través de la imposición de manos, gemas y péndulo canalizo las energías para ayudarte a liberar bloqueos, reducir el estrés y promover tu capacidad natural de autocuración.</p>
                         
                         <div class="service-features">
                             <div class="service-feature">
@@ -1096,12 +1231,17 @@
                             </div>
                             
                             <div class="service-feature">
-                                <h4>Sanación a Distancia</h4>
+                                <h4>Cirugía Astral</h4>
                                 <p></p>
                             </div>
                             
                             <div class="service-feature">
-                                <h4>Gemoterapia y Reflexología</h4>
+                                <h4>Gemoterapia</h4>
+                                <p></p>
+                            </div>
+
+                            <div class="service-feature">
+                                <h4>Radestesia con péndulo</h4>
                                 <p></p>
                             </div>
                         </div>
@@ -1114,11 +1254,11 @@
                 </div>
             </div>
             
-            <!-- Flores de Bach -->
+            <!-- Biodescodificación -->
             <div class="tab-content" id="florales-content">
                 <div class="service-detail">
                     <div class="service-header">
-                        <i class="fas fa-flower"></i>
+                        <i class="fas fa-heart"></i>
                         <div>
                             <h3>Biodescodificación</h3>
                             <p>Terapia floral para equilibrar estados emocionales y promover el bienestar psicológico.</p>
@@ -1200,6 +1340,95 @@
                     </div>
                 </div>
             </div>
+
+             <!-- Masajes Ayurvédicos y Reflexología -->
+            <div class="tab-content" id="masajes-content">
+                <div class="service-detail">
+                    <div class="service-header">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <div>
+                            <h3>Masajes Ayurvédicos y Reflexología</h3>
+                            <p>Entrenamiento en técnicas de atención plena para reducir el estrés y aumentar la claridad mental.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-body">
+                        <p>La meditación y el mindfulness son herramientas poderosas para cultivar la paz interior, reducir la ansiedad y mejorar la concentración. En estas sesiones te guiaré en prácticas adaptadas a tu nivel y necesidades, ayudándote a desarrollar una relación más sana con tus pensamientos y emociones.</p>
+                        
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <h4>Meditaciones Guiadas</h4>
+                                <p>Sesiones personalizadas según tus objetivos (calma, enfoque, sueño, etc.).</p>
+                            </div>
+                            
+                            <div class="service-feature">
+                                <h4>Mindfulness Diario</h4>
+                                <p>Técnicas para incorporar la atención plena en tus actividades cotidianas.</p>
+                            </div>
+                            
+                            <div class="service-feature">
+                                <h4>Gestor de Estrés</h4>
+                                <p>Herramientas específicas para manejar situaciones de alta tensión.</p>
+                            </div>
+                            
+                            <div class="service-feature">
+                                <h4>Meditación en Movimiento</h4>
+                                <p>Prácticas que combinan atención plena con movimiento suave.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#contacto" class="btn">Agendar Sesión de Meditación</a>
+                            <a href="#sesiones" class="btn btn-secondary">Meditación Online</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Armonización del Árbol de la Vida -->
+            <div class="tab-content" id="arbol-content">
+                <div class="service-detail">
+                    <div class="service-header">
+                        <i class="fas fa-tree"></i>
+                        <div>
+                            <h3>Armonización del Árbol de la Vida</h3>
+                            <p>Entrenamiento en técnicas de atención plena para reducir el estrés y aumentar la claridad mental.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-body">
+                        <p>La meditación y el mindfulness son herramientas poderosas para cultivar la paz interior, reducir la ansiedad y mejorar la concentración. En estas sesiones te guiaré en prácticas adaptadas a tu nivel y necesidades, ayudándote a desarrollar una relación más sana con tus pensamientos y emociones.</p>
+                        
+                        <div class="service-features">
+                            <div class="service-feature">
+                                <h4>Numerología/Kabalá</h4>
+                                <p>Sesiones personalizadas según tus objetivos (calma, enfoque, sueño, etc.).</p>
+                            </div>
+                            
+                            <div class="service-feature">
+                                <h4>Mindfulness Diario</h4>
+                                <p>Técnicas para incorporar la atención plena en tus actividades cotidianas.</p>
+                            </div>
+                            
+                            <div class="service-feature">
+                                <h4>Gestor de Estrés</h4>
+                                <p>Herramientas específicas para manejar situaciones de alta tensión.</p>
+                            </div>
+                            
+                            <div class="service-feature">
+                                <h4>Meditación en Movimiento</h4>
+                                <p>Prácticas que combinan atención plena con movimiento suave.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#contacto" class="btn">Agendar Sesión de Meditación</a>
+                            <a href="#sesiones" class="btn btn-secondary">Meditación Online</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -1572,4 +1801,5 @@
     </script>
 </body>
 </html>
+
 
