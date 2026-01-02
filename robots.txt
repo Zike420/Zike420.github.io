@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://vibrasgalvez.online/sitemap.xml
+
+Crawl-delay: 2
