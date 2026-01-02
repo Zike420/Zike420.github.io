@@ -17,27 +17,54 @@
     <script type="application/ld+json">
         {
         "@context": "https://schema.org",
-        "@type": "HealthAndBeautyBusiness",
-        "name": "Vibras Galvez - Betina Más",
-        "description": "Terapia holística y bienestar integral en Gálvez, Santa Fe",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Gálvez",
-            "addressRegion": "Santa Fe",
-            "addressCountry": "AR"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "-32.0293",
-            "longitude": "-61.2210"
-        },
-        "url": "https://vibrasgalvez.online",
-        "telephone": "+543404530130",
-        "openingHours": "Mo-Sa 09:00-20:00",
-        "priceRange": "$$",
-        "sameAs": [
-            "https://www.instagram.com/vibrasgalvez/",
-            "https://www.facebook.com/betina.mas"
+        "@graph": [
+            {
+            "@type": "Organization",
+            "@id": "https://vibrasgalvez.online/#organization",
+            "name": "Vibras Galvez",
+            "url": "https://vibrasgalvez.online",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://vibrasgalvez.online/vibras.ico",
+                "width": 112,
+                "height": 112
+            },
+            "description": "Terapia holística y bienestar integral en Gálvez, Santa Fe"
+            },
+            {
+            "@type": "HealthAndBeautyBusiness",
+            "@id": "https://vibrasgalvez.online/#business",
+            "name": "Vibras Galvez - Betina Más",
+            "description": "Terapeuta holística en Gálvez, Santa Fe. Sesiones de sanación energética, biodescodificación, meditación y masajes ayurvédicos.",
+            "image": "https://i.pinimg.com/736x/3f/c4/46/3fc4462eee78de2306b2cb96c810dc4d.jpg",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Gálvez",
+                "addressRegion": "Santa Fe",
+                "addressCountry": "AR"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "-32.0293",
+                "longitude": "-61.2210"
+            },
+            "url": "https://vibrasgalvez.online",
+            "telephone": "+5493404530130",
+            "openingHoursSpecification": [
+                {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "09:00",
+                "closes": "20:00"
+                }
+            ],
+            "priceRange": "$$",
+            "sameAs": [
+                "https://www.instagram.com/vibrasgalvez/",
+                "https://www.facebook.com/betina.mas",
+                "https://www.youtube.com/@VibrasGalvez"
+            ]
+            }
         ]
         }
     </script>
@@ -2107,6 +2134,7 @@
 
 </body>
 </html>
+
 
 
 
