@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Betina Más | Terapeuta Holística - Bienestar Integral</title>
+    <title>Betina Mas | Terapeuta Holística - Bienestar Integral</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="vibras.ico">
     <style>
         :root {
             --color-lila: #9D8DF1;
@@ -1428,19 +1429,17 @@
                     </div>
                     
                     <div class="online-platforms">
-                        <a href="#" class="platform-btn">
+                        <a href="https://wa.link/l465pf" class="platform-btn">
                             <i class="fas fa-video"></i>
-                            <span>Zoom</span>
-                        </a>
-                        
-                        <a href="#" class="platform-btn">
                             <i class="fab fa-whatsapp"></i>
-                            <span>WhatsApp Video</span>
+                            <span>WhatsApp Video/Zoom/Meet</span>
                         </a>
-                        
+                    </div>
+
+                    <div class="online-platforms">
                         <a href="#" class="platform-btn">
                             <i class="fas fa-phone-alt"></i>
-                            <span>Llamada Telefónica</span>
+                            <span>+54 9 3404-530130</span>
                         </a>
                     </div>
                     
@@ -1520,7 +1519,7 @@
                     </div>
                 </div>
 
-                <div class="testimonial-card">
+                 <div class="testimonial-card">
                     <div class="testimonial-text">
                         "Mil gracias por tu ayuda más que agradecido por haberme ayudado a recuperar poco a poco a mi familia fueron unas charlas muy profundas y llegadoras de esas que te hacen ver miles de cosas gracias a tu sabiduría tu gran carisma agradezco esa gran ayuda para con mi nena hoy puedo afirmar que mi relación cambió un 100% para con ella gracias por ayudarme a verme y poder mejorar en millones de aspectos y costumbres que tenía agradecemos como familia que te allamos cruzado en esta vida  para poder encontrar un camino más que lindo solo queda agradecerte mucho por la gran  personas que sos mil gracias bety."
                     </div>
@@ -1545,7 +1544,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -1600,58 +1599,59 @@
                             <a href="https://www.facebook.com/betina.mas" target="_blank" class="social-icon">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="#" class="social-icon">
+                            <a href="https://wa.link/l465pf" class="social-icon">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
-                            <a href="#" class="social-icon">
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vibrasgalvez@gmail.com" class="social-icon">
                                 <i class="fas fa-envelope"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="contact-form-container">
-                    <h3>Envíame un Mensaje</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nombre completo *</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Correo electrónico *</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Teléfono (opcional)</label>
-                            <input type="tel" id="phone" class="form-control">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service">Servicio de interés</label>
-                            <select id="service" class="form-control">
-                                <option value="">Selecciona una opción</option>
-                                <option value="terapia">Terapia Holística Integral</option>
-                                <option value="reiki">Reiki y Sanación Energética</option>
-                                <option value="florales">Flores de Bach</option>
-                                <option value="meditacion">Meditación y Mindfulness</option>
-                                <option value="consulta">Consulta inicial gratuita</option>
-                                <option value="otro">Otro servicio</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Mensaje *</label>
-                            <textarea id="message" class="form-control" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn" style="width: 100%;">Enviar Mensaje</button>
-                    </form>
-                </div>
+            <div class="contact-form-container">
+                <h3>Envíame un Mensaje</h3>
+                <form id="contactForm" onsubmit="sendEmail(event)">
+                    <div class="form-group">
+                        <label for="name">Nombre completo *</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Tu correo electrónico *</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Teléfono (opcional)</label>
+                        <input type="tel" id="phone" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Servicio de interés</label>
+                        <select id="service" class="form-control">
+                            <option value="">Selecciona una opción</option>
+                            <option value="Terapia Holística Integral">Terapia Holística Integral</option>
+                            <option value="Sanación Energética">Sanación Energética</option>
+                            <option value="Biodescodificación">Biodescodificación</option>
+                            <option value="Meditación y Mindfulness">Meditación y Mindfulness</option>
+                            <option value="Masajes Ayurvédicos">Masajes Ayurvédicos y Reflexología</option>
+                            <option value="Árbol de la Vida">Armonización del Árbol de la Vida</option>
+                            <option value="Consulta inicial gratuita">Consulta inicial gratuita</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensaje *</label>
+                        <textarea id="message" class="form-control" required placeholder="Cuéntame sobre tu situación y qué estás buscando..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%;">Enviar Mensaje</button>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
@@ -1726,14 +1726,14 @@
         });
         
         // Formulario de contacto
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+       // document.getElementById('contactForm').addEventListener('submit', function(e) {
+       //     e.preventDefault();
             
             // Aquí normalmente se enviaría el formulario a un servidor
             // Por ahora solo mostraremos un mensaje de confirmación
-            alert('¡Gracias por tu mensaje! Me pondré en contacto contigo en las próximas 24-48 horas.');
-            this.reset();
-        });
+       //     alert('¡Gracias por tu mensaje! Me pondré en contacto contigo en las próximas 24-48 horas.');
+       //     this.reset();
+       // });
         
         // Formulario de newsletter
         document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
@@ -1783,9 +1783,56 @@
         
         // Inicializar animaciones para la primera sección (hero)
         document.querySelector('.hero').style.opacity = '1';
+
+        // Función para enviar correo a Gmail
+        function sendEmail(event) {
+            event.preventDefault();
+            
+            // Obtener valores del formulario
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value || 'No proporcionado';
+            const service = document.getElementById('service').value || 'No especificado';
+            const message = document.getElementById('message').value;
+            
+            // Construir asunto del correo
+            const subject = `Consulta Terapéutica - ${name} - Servicio: ${service}`;
+            
+            // Construir cuerpo del correo
+            let body = `Nueva consulta desde el sitio web de Betina Más:\n\n`;
+            body += `📋 **Información del Contacto:**\n`;
+            body += `• Nombre: ${name}\n`;
+            body += `• Email: ${email}\n`;
+            body += `• Teléfono: ${phone}\n\n`;
+            body += `💫 **Servicio de Interés:** ${service}\n\n`;
+            body += `📝 **Mensaje:**\n${message}\n\n`;
+            body += `---\n`;
+            body += `📧 Este mensaje fue enviado desde el formulario de contacto de www.betinamas.com`;
+            
+            // Codificar para URL
+            const encodedSubject = encodeURIComponent(subject);
+            const encodedBody = encodeURIComponent(body);
+            
+            // Crear enlace mailto con prefijo de Gmail
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=vibrasgalvez@gmail.com&su=${encodedSubject}&body=${encodedBody}`;
+            
+            // Abrir en nueva pestaña
+            window.open(gmailUrl, '_blank');
+            
+            // Mostrar mensaje de confirmación
+            alert('¡Gracias por tu mensaje! Se abrirá Gmail con tu mensaje pre-llenado. Si no se abre automáticamente, por favor envía tu correo a vibrasgalvez@gmail.com');
+            
+            // Limpiar formulario (opcional, si quieres mantener los datos comenta esta línea)
+            // document.getElementById('contactForm').reset();
+        }
+
+        // Agregar event listener al formulario
+        document.getElementById('contactForm').addEventListener('submit', sendEmail);
+
     </script>
 </body>
 </html>
+
 
 
 
