@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Betina Más - Terapeuta holística en Gálvez. Sesiones de terapia holística, sanación energética, biodescodificación, meditación y masajes. Bienestar integral para equilibrio físico, emocional, mental y espiritual. Consulta online y presencial.">
-    <meta name="keywords" content="vibras galvez, terapeuta holística, terapia holística, sanación energética, biodescodificación, meditación, masajes ayurvédicos, bienestar integral, Gálvez Santa Fe">
+    <meta name="keywords" content="vibras gálvez, terapeuta holística, terapia holística, sanación energética, biodescodificación, meditación, masajes ayurvédicos, bienestar integral, Gálvez Santa Fe">
     <meta name="google-site-verification" content="gx-G7MjhhPjYgqm6VMVBFRpyGvRoQRQq_Srk54cYTmE" />
 
-    <title>Vibras Galvez | Terapeuta Holística en Gálvez - Betina Más</title>
+    <title>Vibras Gálvez | Terapeuta Holística en Gálvez - Betina Más</title>
     
     <!-- Favicon -->
     <link rel="icon" href="https://vibrasgalvez.online/favicon.ico" type="image/x-icon">
@@ -15,15 +15,15 @@
     <link rel="apple-touch-icon" href="https://vibrasgalvez.online/logo-apple.png">
     
     <!-- (Facebook, WhatsApp) -->
-    <meta property="og:title" content="Vibras Galvez | Terapeuta Holística en Gálvez">
+    <meta property="og:title" content="Vibras Gálvez | Terapeuta Holística en Gálvez">
     <meta property="og:description" content="Betina Más - Terapeuta holística. Sesiones de sanación energética, biodescodificación, meditación y masajes ayurvédicos en Gálvez y online.">
     <meta property="og:image" content="https://i.pinimg.com/736x/3f/c4/46/3fc4462eee78de2306b2cb96c810dc4d.jpg">
     <meta property="og:url" content="https://vibrasgalvez.online">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Vibras Galvez">
+    <meta property="og:site_name" content="Vibras Gálvez">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vibras Galvez | Terapeuta Holística en Gálvez">
+    <meta name="twitter:title" content="Vibras Gálvez | Terapeuta Holística en Gálvez">
     <meta name="twitter:description" content="Sesiones de terapia holística y bienestar integral con Betina Más.">
     <meta name="twitter:image" content="https://i.pinimg.com/736x/3f/c4/46/3fc4462eee78de2306b2cb96c810dc4d.jpg">
     
@@ -39,7 +39,7 @@
                 {
                     "@type": "Organization",
                     "@id": "https://vibrasgalvez.online/#organization",
-                    "name": "Vibras Galvez",
+                    "name": "Vibras Gálvez",
                     "url": "https://vibrasgalvez.online",
                     "logo": "https://vibrasgalvez.online/logo.png", <!-- URL ACTUALIZADA -->
                     "description": "Terapia holística y bienestar integral en Gálvez, Santa Fe"
@@ -81,7 +81,7 @@
             ]
         }
     </script>
-    
+
     <style>
         :root {
             --color-lila: #9D8DF1;
@@ -1239,6 +1239,16 @@
             }
         }
 
+        #copyEmailBtn.copied {
+            background-color: var(--color-menta); /* O el color que prefieras */
+            color: var(--color-lila-oscuro);
+            border-color: var(--color-menta);
+        }
+
+        #copyEmailBtn.copied i {
+            color: var(--color-lila-oscuro);
+        }
+
     </style>
 </head>
 <body>
@@ -1838,8 +1848,11 @@
                             <a href="https://wa.link/l465pf" class="social-icon">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vibrasgalvez@gmail.com" class="social-icon">
+                            <a href="#" class="social-icon" id="copyEmailBtn" onclick="copyEmailAddress(event)">
                                 <i class="fas fa-envelope"></i>
+                                <span class="copy-indicator" id="emailCopyIndicator" style="display: none;">
+                                    <i class="fas fa-check"></i> Copiado!
+                                </span>
                             </a>
                         </div>
                     </div>
@@ -1914,7 +1927,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2026 Betina Mas - Terapeuta Holística. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Betina Más - Terapeuta Holística. Todos los derechos reservados.</p>
                 <p style="margin-top: 10px;">Sesiones presenciales en Gálvez, Santa Fe, y online para todo el mundo.</p>
             </div>
         </div>
@@ -2129,6 +2142,69 @@
             }
         });
 
+        // Función para copiar el correo electrónico
+        function copyEmailAddress(event) {
+            event.preventDefault(); // Evita que el enlace "#" navegue
+            const emailAddress = 'vibrasgalvez@gmail.com';
+            
+            // Crear un elemento temporal para copiar
+            const tempInput = document.createElement('textarea');
+            tempInput.value = emailAddress;
+            document.body.appendChild(tempInput);
+            
+            // Seleccionar y copiar
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999);
+            
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    // Mostrar popup del correo
+                    showEmailPopup();
+                    
+                    // Cambiar estilo del botón temporalmente
+                    const emailBtn = document.getElementById('copyEmailBtn');
+                    emailBtn.classList.add('copied');
+                    
+                    // Restaurar después de 3 segundos
+                    setTimeout(() => {
+                        emailBtn.classList.remove('copied');
+                    }, 3000);
+                }
+            } catch (err) {
+                console.error('Error al copiar el correo: ', err);
+                // Fallback: abrir cliente de correo
+                window.location.href = 'mailto:' + emailAddress;
+            }
+            
+            // Limpiar
+            document.body.removeChild(tempInput);
+        }
+
+        // Función para mostrar el popup del correo
+        function showEmailPopup() {
+            const popup = document.getElementById('emailPopup');
+            popup.style.display = 'flex';
+            
+            // Cerrar automáticamente después de 5 segundos
+            setTimeout(() => {
+                closeEmailPopup();
+            }, 5000);
+        }
+
+        // Función para cerrar el popup del correo
+        function closeEmailPopup() {
+            const popup = document.getElementById('emailPopup');
+            popup.style.display = 'none';
+        }
+
+        // Cerrar popup al hacer clic fuera o con Escape
+        document.getElementById('emailPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeEmailPopup();
+            }
+        });
+
     </script>
 
     <div id="phonePopup" class="phone-popup">
@@ -2145,8 +2221,23 @@
         </div>
     </div>
 
+    <div id="emailPopup" class="phone-popup"> <!-- Reutiliza la misma clase CSS -->
+        <div class="popup-content">
+            <div class="popup-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>¡Correo copiado!</h3>
+            <p>La dirección <strong>vibrasgalvez@gmail.com</strong> se ha copiado al portapapeles.</p>
+            <div class="popup-actions">
+                <button class="btn popup-close-btn" onclick="closeEmailPopup()">Aceptar</button>
+                <a href="mailto:vibrasgalvez@gmail.com" class="btn btn-secondary">Abrir mi Correo</a>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
+
 
 
 
