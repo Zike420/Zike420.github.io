@@ -39,7 +39,7 @@
                 {
                 "@type": "Organization",
                 "@id": "https://vibrasgalvez.online/#organization",
-                "name": "Vibras Gálvez",
+                "name": "Vibras Galvez",
                 "url": "https://vibrasgalvez.online",
                 "logo": "https://vibrasgalvez.online/logo.png",
                 "description": "Terapia holística y bienestar integral en Gálvez, Santa Fe"
@@ -1249,6 +1249,407 @@
             color: var(--color-lila-oscuro);
         }
 
+        /* Spotify Section Styles */
+        .spotify-section {
+            background-color: var(--color-gris-claro);
+        }
+        
+        .spotify-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .spotify-info {
+            flex: 1.2;
+        }
+        
+        .spotify-info h3 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: var(--color-lila-oscuro);
+        }
+        
+        .spotify-features-list {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .spotify-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 500;
+        }
+        
+        .spotify-feature-item i {
+            color: var(--color-lila);
+            font-size: 1.2rem;
+            width: 25px;
+            text-align: center;
+        }
+        
+        .spotify-player-container {
+            flex: 0.8;
+            box-shadow: 0 15px 35px var(--sombra);
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #282828; /* Matches dark Spotify frame */
+        }
+        
+        /* Ebooks Section Styles */
+        .ebooks-section {
+            background-color: var(--color-blanco);
+        }
+        
+        .ebooks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .ebook-card {
+            background-color: var(--color-gris-claro);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px var(--sombra);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            border: 1px solid rgba(157, 141, 241, 0.1);
+            max-width: 360px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .ebook-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px var(--sombra-fuerte);
+            border-color: var(--color-lila);
+        }
+        
+        .ebook-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--color-menta);
+            color: var(--color-lila-oscuro);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            z-index: 10;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .ebook-cover-container {
+            height: 380px;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(157, 141, 241, 0.1) 0%, rgba(168, 230, 207, 0.1) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+        
+        .ebook-cover {
+            height: 100%;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+            border-radius: 5px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.5s ease;
+        }
+        
+        .ebook-card:hover .ebook-cover {
+            transform: scale(1.05) rotate(1deg);
+        }
+        
+        .ebook-info {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        
+        .ebook-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: var(--color-lila-oscuro);
+        }
+        
+        .ebook-desc {
+            font-size: 0.95rem;
+            color: var(--color-gris);
+            margin-bottom: 20px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        
+        .ebook-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            color: var(--color-gris);
+            font-weight: 500;
+        }
+        
+        .ebook-meta i {
+            color: var(--color-lila);
+        }
+        
+        .ebook-price-container {
+            margin-bottom: 20px;
+        }
+        
+        .ebook-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-lila-oscuro);
+            font-family: 'Merriweather', serif;
+        }
+        
+        .btn-buy {
+            width: 100%;
+            text-align: center;
+        }
+        
+        /* Checkout Modal Styles */
+        #checkoutModal {
+            align-items: flex-start;
+            overflow-y: auto;
+            padding: 40px 10px;
+        }
+
+        .pay-tab-disabled {
+            opacity: 0.5 !important;
+            cursor: not-allowed !important;
+            background-color: #eee !important;
+            border-color: #ccc !important;
+            color: #999 !important;
+        }
+        
+        .pay-tab-disabled:hover {
+            background-color: #eee !important;
+            transform: none !important;
+            border-color: #ccc !important;
+            box-shadow: none !important;
+        }
+
+        .checkout-modal-content {
+            max-width: 550px;
+            position: relative;
+            padding: 45px 35px 35px;
+            text-align: left;
+        }
+        
+        .modal-close-x {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: var(--color-gris);
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.3s;
+        }
+        
+        .modal-close-x:hover {
+            color: var(--color-lila-oscuro);
+        }
+        
+        .checkout-header {
+            border-bottom: 2px solid var(--color-lila-claro);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .checkout-header h2 {
+            font-size: 1.8rem;
+            color: var(--color-lila-oscuro);
+            margin-bottom: 5px;
+        }
+        
+        .checkout-header p {
+            color: var(--color-gris);
+            font-size: 0.95rem;
+        }
+        
+        .checkout-product-summary {
+            display: flex;
+            gap: 20px;
+            background-color: var(--color-gris-claro);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(157, 141, 241, 0.1);
+        }
+        
+        .modal-book-cover {
+            height: 100px;
+            width: auto;
+            border-radius: 3px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+        }
+        
+        .modal-book-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .modal-book-details h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .modal-book-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--color-lila);
+            font-family: 'Merriweather', serif;
+            margin-bottom: 5px;
+        }
+        
+        .modal-book-format {
+            font-size: 0.8rem;
+            color: var(--color-gris);
+            font-weight: 500;
+        }
+        
+        .payment-methods-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--color-lila-claro);
+            padding-bottom: 10px;
+        }
+        
+        .pay-tab {
+            flex: 1;
+            padding: 12px;
+            background: none;
+            border: 2px solid var(--color-lila-claro);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--color-gris);
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .pay-tab.active {
+            color: var(--color-lila-oscuro);
+            background-color: rgba(157, 141, 241, 0.1);
+            border-color: var(--color-lila);
+        }
+        
+        .payment-method-info {
+            display: none;
+            animation: fadeIn 0.3s;
+        }
+        
+        .payment-method-info.active {
+            display: block;
+        }
+        
+        .payment-method-desc {
+            font-size: 0.9rem;
+            color: var(--color-gris);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .btn-mp-pay {
+            width: 100%;
+            background-color: #00B1EA; /* Official Mercado Pago Teal-Blue */
+            box-shadow: 0 4px 15px rgba(0, 177, 234, 0.25);
+        }
+        
+        .btn-mp-pay:hover {
+            background-color: #0087B2;
+            transform: translateY(-2px);
+        }
+        
+        .btn-bank-confirm {
+            width: 100%;
+            background-color: #25D366; /* Official WhatsApp Green */
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25);
+        }
+        
+        .btn-bank-confirm:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+        }
+        
+        .bank-details-box {
+            background-color: var(--color-crema);
+            border: 1px dashed var(--color-lila);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .bank-details-box p {
+            margin-bottom: 6px;
+        }
+        
+        .bank-details-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .bank-warning {
+            color: #d9534f;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        /* Spotify and Ebooks Responsive Adjustments */
+        @media (max-width: 992px) {
+            .spotify-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .spotify-player-container {
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .checkout-modal-content {
+                padding: 30px 20px 20px;
+            }
+            .payment-methods-tabs {
+                flex-direction: column;
+            }
+            .pay-tab {
+                width: 100%;
+            }
+            .checkout-product-summary {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -1275,6 +1676,8 @@
                     <li><a href="#sobre">Sobre Mí</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#sesiones">Sesiones Online</a></li>
+                    <li><a href="#spotify">Podcast</a></li>
+                    <li><a href="#ebooks">Ebooks</a></li>
                     <li><a href="#testimonios">Testimonios</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
@@ -1698,6 +2101,129 @@
         </div>
     </section>
 
+    <!-- Spotify Section -->
+    <section id="spotify" class="spotify-section fade-in">
+        <div class="container">
+            <div class="section-title">
+                <h2>Conecta con nuestro Podcast</h2>
+            </div>
+            
+            <div class="section-subtitle">
+                <p>Escucha reflexiones, charlas y herramientas de autoconocimiento directamente desde Spotify.</p>
+            </div>
+            
+            <div class="spotify-content">
+                <div class="spotify-info">
+                    <h3>Espacio de Reflexión y Sanación</h3>
+                    <p>Te invito a sumergirte en nuestro podcast, un espacio diseñado para acompañarte en tu proceso de evolución personal. Encontrarás charlas y episodios dedicados a la sanación, biodescodificación, meditación y bienestar integral.</p>
+                    <p>Presiona reproducir en cualquiera de los episodios, cierra los ojos y acompáñanos en este viaje consciente hacia adentro.</p>
+                    
+                    <div class="spotify-features-list">
+                        <div class="spotify-feature-item">
+                            <i class="fas fa-podcast"></i>
+                            <span>Episodios de Autoconocimiento y Crecimiento</span>
+                        </div>
+                        <div class="spotify-feature-item">
+                            <i class="fas fa-comments"></i>
+                            <span>Charlas Inspiradoras y Herramientas Prácticas</span>
+                        </div>
+                        <div class="spotify-feature-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Reflexiones para tu Bienestar Diario</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="spotify-player-container">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/3IOiZYDIJnUkZRn1wWWoZ2?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ebooks Catalog Section -->
+    <section id="ebooks" class="ebooks-section fade-in">
+        <div class="container">
+            <div class="section-title">
+                <h2>Recursos para tu Evolución</h2>
+            </div>
+            
+            <div class="section-subtitle">
+                <p>Ebooks y guías prácticas diseñadas para acompañarte en tu proceso de autodescubrimiento y bienestar.</p>
+            </div>
+            
+            <div class="ebooks-grid">
+                <!-- Ebook 1 -->
+                <div class="ebook-card">
+                    <div class="ebook-badge">PDF Interactivo</div>
+                    <div class="ebook-cover-container">
+                        <img src="MIRARTESINFILTROS.jpeg" alt="Portada Ebook Te desafío a mirarte sin filtros" class="ebook-cover">
+                    </div>
+                    <div class="ebook-info">
+                        <h3>Te desafío a mirarte sin filtros</h3>
+                        <div class="ebook-desc">
+                            <p style="margin-bottom: 12px;">“Te desafío a mirarte sin filtros” es un workbook de autoconocimiento y transformación personal creado para acompañarte a conectar con tu esencia, reconocer tus emociones y comenzar un camino más consciente hacia vos mismo/a.</p>
+                            <p style="margin-bottom: 12px;">A través de ejercicios, reflexiones y herramientas profundas pero simples, este libro te invita a soltar máscaras, cuestionar creencias limitantes y aprender a habitar tu mundo interior con más amor, autenticidad y claridad.</p>
+                            <p>Ideal para quienes desean sanar, crecer emocionalmente y volver a elegirse todos los días. Un espacio íntimo para mirarte de verdad… sin filtros, sin exigencias y sin dejarte para después.</p>
+                        </div>
+                        <div class="ebook-meta">
+                            <span><i class="far fa-file-pdf"></i> 53 páginas</span>
+                            <span><i class="fas fa-book-open"></i> Workbook</span>
+                        </div>
+                        <div class="ebook-price-container">
+                            <span class="ebook-price">$15.000 ARS</span>
+                        </div>
+                        <button class="btn btn-buy" onclick="openCheckout('Te desafío a mirarte sin filtros', 15000, 'MIRARTESINFILTROS.jpeg')">Adquirir Ebook</button>
+                    </div>
+                </div>
+                
+                <!-- 
+                [Ebook 2 Ocultado temporalmente]
+                <div class="ebook-card">
+                    <div class="ebook-badge">PDF Interactivo</div>
+                    <div class="ebook-cover-container">
+                        <img src="ebook_biodesco.png" alt="Portada Ebook Biodescodificación" class="ebook-cover">
+                    </div>
+                    <div class="ebook-info">
+                        <h3>Biodescodificación Emocional</h3>
+                        <p class="ebook-desc">Una guía práctica para descifrar el mensaje detrás de los síntomas corporales, identificar creencias limitantes y sanar desde el inconsciente.</p>
+                        <div class="ebook-meta">
+                            <span><i class="far fa-file-pdf"></i> PDF</span>
+                            <span><i class="far fa-clock"></i> 95 páginas</span>
+                        </div>
+                        <div class="ebook-price-container">
+                            <span class="ebook-price">$2.800 ARS</span>
+                        </div>
+                        <button class="btn btn-buy" onclick="openCheckout('Biodescodificación Emocional', 2800, 'ebook_biodesco.png')">Adquirir Ebook</button>
+                    </div>
+                </div>
+                -->
+                
+                <!-- 
+                [Ebook 3 Ocultado temporalmente]
+                <div class="ebook-card">
+                    <div class="ebook-badge">PDF Interactivo</div>
+                    <div class="ebook-cover-container">
+                        <img src="ebook_meditacion.png" alt="Portada Ebook Meditación Diaria" class="ebook-cover">
+                    </div>
+                    <div class="ebook-info">
+                        <h3>El Arte de Estar Presente</h3>
+                        <p class="ebook-desc">Ejercicios de mindfulness y meditaciones guiadas paso a paso para reducir la ansiedad, calmar la mente y vivir en equilibrio día a día.</p>
+                        <div class="ebook-meta">
+                            <span><i class="far fa-file-pdf"></i> PDF</span>
+                            <span><i class="far fa-clock"></i> 70 páginas</span>
+                        </div>
+                        <div class="ebook-price-container">
+                            <span class="ebook-price">$2.200 ARS</span>
+                        </div>
+                        <button class="btn btn-buy" onclick="openCheckout('El Arte de Estar Presente', 2200, 'ebook_meditacion.png')">Adquirir Ebook</button>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonios -->
     <section id="testimonios" class="testimonials-section fade-in">
         <div class="container">
@@ -1919,6 +2445,8 @@
                         <li><a href="#sobre">Sobre Mí</a></li>
                         <li><a href="#servicios">Servicios</a></li>
                         <li><a href="#sesiones">Sesiones Online</a></li>
+                        <li><a href="#spotify">Podcast</a></li>
+                        <li><a href="#ebooks">Ebooks</a></li>
                         <li><a href="#testimonios">Testimonios</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
@@ -1934,63 +2462,7 @@
     </footer>
 
     <script>
-        // Menú móvil
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-            document.getElementById('mainMenu').classList.toggle('active');
-            this.innerHTML = document.getElementById('mainMenu').classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Tabs de servicios
-        document.querySelectorAll('.tab-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                // Remover clase active de todos los botones
-                document.querySelectorAll('.tab-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                
-                // Añadir clase active al botón clickeado
-                this.classList.add('active');
-                
-                // Obtener el tab seleccionado
-                const tabId = this.getAttribute('data-tab');
-                
-                // Ocultar todos los contenidos
-                document.querySelectorAll('.tab-content').forEach(content => {
-                    content.classList.remove('active');
-                });
-                
-                // Mostrar el contenido correspondiente
-                document.getElementById(`${tabId}-content`).classList.add('active');
-            });
-        });
-        
-        // Smooth scroll para enlaces internos
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    // Cerrar menú móvil si está abierto
-                    if (document.getElementById('mainMenu').classList.contains('active')) {
-                        document.getElementById('mainMenu').classList.remove('active');
-                        document.getElementById('mobileMenuBtn').innerHTML = '<i class="fas fa-bars"></i>';
-                    }
-                    
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Animaciones al hacer scroll
+        // Animaciones al hacer scroll (Función global para ser accedida en cualquier momento)
         function checkVisibility() {
             const elements = document.querySelectorAll('.fade-in');
             elements.forEach(element => {
@@ -2000,13 +2472,80 @@
                 }
             });
         }
-        
-        // Ejecutar al cargar y al hacer scroll
-        window.addEventListener('scroll', checkVisibility);
-        window.addEventListener('load', checkVisibility);
-        
-        // Inicializar animaciones para la primera sección (hero)
-        document.querySelector('.hero').style.opacity = '1';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Menú móvil
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainMenu = document.getElementById('mainMenu');
+            if (mobileMenuBtn && mainMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainMenu.classList.toggle('active');
+                    this.innerHTML = mainMenu.classList.contains('active') 
+                        ? '<i class="fas fa-times"></i>' 
+                        : '<i class="fas fa-bars"></i>';
+                });
+            }
+            
+            // Tabs de servicios
+            document.querySelectorAll('.tab-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remover clase active de todos los botones
+                    document.querySelectorAll('.tab-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    // Añadir clase active al botón clickeado
+                    this.classList.add('active');
+                    
+                    // Obtener el tab seleccionado
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // Ocultar todos los contenidos
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    // Mostrar el contenido correspondiente
+                    const targetContent = document.getElementById(`${tabId}-content`);
+                    if (targetContent) targetContent.classList.add('active');
+                });
+            });
+            
+            // Smooth scroll para enlaces internos
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Cerrar menú móvil si está abierto
+                        const menu = document.getElementById('mainMenu');
+                        const menuBtn = document.getElementById('mobileMenuBtn');
+                        if (menu && menu.classList.contains('active')) {
+                            menu.classList.remove('active');
+                            if (menuBtn) menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                        }
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Enlace de eventos de scroll
+            window.addEventListener('scroll', checkVisibility);
+            window.addEventListener('load', checkVisibility);
+            checkVisibility(); // Ejecutar control de visibilidad al cargar
+            
+            // Inicializar animaciones para la primera sección (hero)
+            const hero = document.querySelector('.hero');
+            if (hero) hero.style.opacity = '1';
+        });
 
         // Detectar si es dispositivo móvil
         function isMobileDevice() {
@@ -2061,7 +2600,12 @@
         }
 
         // Agregar event listener al formulario
-        document.getElementById('contactForm').addEventListener('submit', sendEmail);
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', sendEmail);
+            }
+        });
 
         // Función para copiar el número de teléfono
         function copyPhoneNumber() {
@@ -2129,9 +2673,14 @@
         }
 
         // Cerrar popup al hacer clic fuera del contenido
-        document.getElementById('phonePopup').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closePhonePopup();
+        document.addEventListener('DOMContentLoaded', () => {
+            const popup = document.getElementById('phonePopup');
+            if (popup) {
+                popup.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closePhonePopup();
+                    }
+                });
             }
         });
 
@@ -2139,6 +2688,10 @@
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closePhonePopup();
+                closeEmailPopup();
+                if (typeof closeCheckout === 'function') {
+                    closeCheckout();
+                }
             }
         });
 
@@ -2199,11 +2752,140 @@
         }
 
         // Cerrar popup al hacer clic fuera o con Escape
-        document.getElementById('emailPopup').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeEmailPopup();
+        document.addEventListener('DOMContentLoaded', () => {
+            const popup = document.getElementById('emailPopup');
+            if (popup) {
+                popup.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeEmailPopup();
+                    }
+                });
+            }
+
+            const modal = document.getElementById('checkoutModal');
+            if (modal) {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeCheckout();
+                    }
+                });
             }
         });
+
+        // ==========================================
+        // LÓGICA DE COMPRA Y CHECKOUT DE EBOOKS
+        // ==========================================
+        let currentEbookName = "";
+        let currentEbookPrice = 0;
+        let currentEbookCover = "";
+        let currentEbookMpLink = "";
+        let selectedPaymentMethod = "mp"; // "mp" o "bank"
+
+        // Enlaces de pago reales de Mercado Pago para cada Ebook (Betina puede reemplazarlos cuando quiera)
+        const mpLinks = {
+            "Te desafío a mirarte sin filtros": "https://mpago.la/placeholder-link"
+        };
+
+        // Abrir modal de compra
+        function openCheckout(title, price, coverImage) {
+            currentEbookName = title;
+            currentEbookPrice = price;
+            currentEbookCover = coverImage;
+            
+            // Asignar el enlace de Mercado Pago correspondiente
+            currentEbookMpLink = mpLinks[title] || "https://www.mercadopago.com.ar";
+
+            // Cargar datos dinámicamente en el modal
+            document.getElementById('modalBookTitle').innerText = title;
+            document.getElementById('modalBookPrice').innerText = `$${price.toLocaleString('es-AR')} ARS`;
+            document.getElementById('modalBookCover').src = coverImage;
+            document.getElementById('modalBookCover').alt = `Portada de ${title}`;
+
+            // Limpiar campos del comprador
+            document.getElementById('buyerName').value = "";
+            document.getElementById('buyerEmail').value = "";
+            
+            // Mostrar modal
+            const modal = document.getElementById('checkoutModal');
+            modal.style.display = 'flex';
+            
+            // Seleccionar Transferencia por defecto (Mercado Pago bloqueado temporalmente)
+            selectPayMethod('bank');
+        }
+
+        // Cerrar modal de compra
+        function closeCheckout() {
+            document.getElementById('checkoutModal').style.display = 'none';
+        }
+
+        // Cambiar entre métodos de pago
+        function selectPayMethod(method) {
+            if (method === 'mp') return; // Bloquear selección de Mercado Pago temporalmente
+            selectedPaymentMethod = method;
+            
+            // Actualizar pestañas activas
+            document.querySelectorAll('.pay-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector(`.pay-tab[data-method="${method}"]`).classList.add('active');
+
+            // Mostrar/Ocultar paneles informativos
+            document.getElementById('method-mp-info').classList.remove('active');
+            document.getElementById('method-bank-info').classList.remove('active');
+            document.getElementById(`method-${method}-info`).classList.add('active');
+        }
+
+        // Procesar el formulario de compra
+        function processCheckout(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('buyerName').value.trim();
+            const email = document.getElementById('buyerEmail').value.trim();
+            
+            if (!name || !email) {
+                alert('Por favor completa todos los campos.');
+                return;
+            }
+
+            let message = "";
+            const whatsappPhone = "5493404530130"; // Teléfono de Betina
+
+            if (selectedPaymentMethod === "mp") {
+                message = `¡Hola Betina! Quiero adquirir el Ebook:\n*${currentEbookName}* ($${currentEbookPrice.toLocaleString('es-AR')} ARS)\n\n`;
+                message += `📋 *Mis Datos:*\n`;
+                message += `• Nombre: ${name}\n`;
+                message += `• Email: ${email}\n\n`;
+                message += `💳 Elegí pagar con *Mercado Pago*.\n\n`;
+                message += `_Nota: Ya me encuentro realizando el pago mediante el link de Mercado Pago. Te comparto el comprobante._`;
+                
+                // Abrir el link de Mercado Pago en pestaña nueva
+                window.open(currentEbookMpLink, '_blank');
+                
+                alert('Se abrirá la ventana de pago seguro de Mercado Pago. Luego de pagar, te redirigiremos a WhatsApp para enviar tus datos de compra a Betina.');
+            } else {
+                // Transferencia bancaria
+                message = `¡Hola Betina! Quiero adquirir el Ebook:\n*${currentEbookName}* ($${currentEbookPrice.toLocaleString('es-AR')} ARS)\n\n`;
+                message += `📋 *Mis Datos:*\n`;
+                message += `• Nombre: ${name}\n`;
+                message += `• Email: ${email}\n\n`;
+                message += `🏦 Elegí pagar mediante *Transferencia Bancaria*.\n\n`;
+                message += `_A continuación te envío el comprobante de transferencia._`;
+                
+                alert('Gracias por tu preferencia. A continuación se abrirá WhatsApp para que puedas enviarle a Betina el comprobante de tu transferencia.');
+            }
+
+            // Codificar mensaje para WhatsApp y abrir link
+            const encodedMsg = encodeURIComponent(message);
+            const wsUrl = `https://wa.me/${whatsappPhone}?text=${encodedMsg}`;
+            
+            // Cerrar modal
+            closeCheckout();
+            
+            // Abrir WhatsApp con delay para permitir transiciones
+            setTimeout(() => {
+                window.open(wsUrl, '_blank');
+            }, 1000);
+        }
 
     </script>
 
@@ -2232,6 +2914,70 @@
                 <button class="btn popup-close-btn" onclick="closeEmailPopup()">Aceptar</button>
                 <a href="mailto:vibrasgalvez@gmail.com" class="btn btn-secondary">Abrir mi Correo</a>
             </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="phone-popup" style="display: none;">
+        <div class="popup-content checkout-modal-content">
+            <button class="modal-close-x" onclick="closeCheckout()">&times;</button>
+            <div class="checkout-header">
+                <h2>Adquirir Ebook</h2>
+                <p>Completa tus datos para continuar con la compra segura.</p>
+            </div>
+            
+            <div class="checkout-product-summary">
+                <img id="modalBookCover" src="" alt="Portada Ebook" class="modal-book-cover">
+                <div class="modal-book-details">
+                    <h3 id="modalBookTitle">Título del Ebook</h3>
+                    <p id="modalBookPrice" class="modal-book-price">$0 ARS</p>
+                    <span class="modal-book-format"><i class="far fa-file-pdf"></i> Formato PDF (Envío por Email / WhatsApp)</span>
+                </div>
+            </div>
+            
+            <form id="checkoutForm" onsubmit="processCheckout(event)">
+                <div class="form-group" style="text-align: left;">
+                    <label for="buyerName" style="margin-bottom: 5px; font-weight: 600; font-size: 0.9rem;">Nombre Completo *</label>
+                    <input type="text" id="buyerName" class="form-control" placeholder="Ej. María Pérez" required>
+                </div>
+                
+                <div class="form-group" style="text-align: left;">
+                    <label for="buyerEmail" style="margin-bottom: 5px; font-weight: 600; font-size: 0.9rem;">Correo Electrónico (donde recibirás el Ebook) *</label>
+                    <input type="email" id="buyerEmail" class="form-control" placeholder="Ej. maria@correo.com" required>
+                </div>
+
+                <div class="payment-methods-tabs">
+                    <button type="button" class="pay-tab pay-tab-disabled" data-method="mp" onclick="selectPayMethod('mp')" disabled title="Mercado Pago estará disponible próximamente">
+                        <i class="fas fa-credit-card"></i> Mercado Pago (Próximamente)
+                    </button>
+                    <button type="button" class="pay-tab active" data-method="bank" onclick="selectPayMethod('bank')">
+                        <i class="fas fa-university"></i> Transferencia
+                    </button>
+                </div>
+
+                <!-- Mercado Pago Info Box -->
+                <div id="method-mp-info" class="payment-method-info">
+                    <p class="payment-method-desc">Paga online de forma 100% segura con tarjeta de crédito, débito o saldo de Mercado Pago.</p>
+                    <button type="submit" class="btn btn-mp-pay">
+                        <i class="fas fa-wallet"></i> Pagar con Mercado Pago
+                    </button>
+                </div>
+
+                <!-- Bank Info Box -->
+                <div id="method-bank-info" class="payment-method-info active">
+                    <p class="payment-method-desc">Realiza la transferencia desde tu home banking y envía el comprobante por WhatsApp.</p>
+                    <div class="bank-details-box">
+                        <p><strong>Banco:</strong> Ualá Bank S.A.U.</p>
+                        <p><strong>Titular:</strong> BETINA DEL CARMEN MAS</p>
+                        <p><strong>Alias:</strong> vibras.galvez.betina</p>
+                        <p><strong>CBU:</strong> 3840200500000030595268</p>
+                        <p class="bank-warning"><i class="fas fa-exclamation-triangle"></i> Por favor copia el Alias para transferir.</p>
+                    </div>
+                    <button type="submit" class="btn btn-bank-confirm">
+                        <i class="fab fa-whatsapp"></i> Confirmar y Enviar Comprobante
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 
